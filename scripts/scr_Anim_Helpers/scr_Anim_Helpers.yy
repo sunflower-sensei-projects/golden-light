@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Anim_Helpers",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Anim_Helpers",
+  "parent":{
+    "name":"Animations",
+    "path":"folders/Scripts/Animations.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Find_Facing_Object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Find_Facing_Object",
+  "parent":{
+    "name":"Abilities",
+    "path":"folders/Scripts/Abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

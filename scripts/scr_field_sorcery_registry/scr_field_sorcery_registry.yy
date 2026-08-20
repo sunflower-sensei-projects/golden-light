@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_field_sorcery_registry",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_field_sorcery_registry",
+  "parent":{
+    "name":"Abilities",
+    "path":"folders/Scripts/Abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

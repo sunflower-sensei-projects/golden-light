@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_panel_hue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_panel_hue",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

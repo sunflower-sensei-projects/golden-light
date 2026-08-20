@@ -1,0 +1,1 @@
+draw_sprite(spr_menu_pointer, image_index, x, y);

@@ -1,0 +1,1 @@
+draw_sprite_stretched(global.battle_bg, 0, x_viewport, y_viewport, bg_width, bg_height);

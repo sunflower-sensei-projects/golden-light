@@ -1,0 +1,148 @@
+{
+	"Sorceries": [
+		{
+			"name": "Heal",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Restore 70 HP to one ally.",
+			"range": 1,
+			"vp_cost": 3,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_heal",
+			"effect": "heal_70_single"
+		},
+		{
+			"name": "Potent Heal",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Restore 150 HP to one ally.",
+			"range": 1,
+			"vp_cost": 7,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_p_heal",
+			"effect": "heal_150_single"
+		},
+		{
+			"name": "Lay on Hands",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Completely restore one ally's HP.",
+			"range": 1,
+			"vp_cost": 16,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_loh",
+			"effect": "heal_full_single"
+		},
+		{
+			"name": "Raise",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Revive one downed ally.",
+			"range": 1,
+			"vp_cost": 12,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_raise",
+			"effect": "raise_single"
+		},
+		{
+			"name": "Resurrect",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Revive one downed ally with full HP.",
+			"range": 1,
+			"vp_cost": 20,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_resurrect",
+			"effect": "resurrect_single"
+		},
+		{
+			"name": "Mass Raise",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Revive all downed allies.",
+			"range": "ALL",
+			"vp_cost": 24,
+			"power": 0,
+			"target": "Party",
+			"sprite": "spr_sorc_mass_raise",
+			"effect": "raise_all"
+		},
+		{
+			"name": "Auto-Raise",
+			"element": "Earth",
+			"use_zone": "Battle",
+			"description": "Grant a boon which revives an ally if they are downed.",
+			"range": 1,
+			"vp_cost": 20,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_auto_raise",
+			"effect": "boon_auto_raise"
+		},
+		{
+			"name": "Push",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Repel one foe with force.",
+			"range": 1,
+			"vp_cost": 2,
+			"power": "Earth_Power",
+			"target": "Foe",
+			"sprite": "spr_sorc_push",
+			"effect": null
+		},
+		{
+			"name": "Slide",
+			"element": "Earth",
+			"use_zone": "Field",
+			"description": "Move an object with force.",
+			"range": 0,
+			"vp_cost": 2,
+			"power": null,
+			"target": null,
+			"sprite": "spr_sorc_slide",
+			"effect": null
+		},
+		{
+			"name": "Quake",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Attack foes with an earthquake.",
+			"range": 3,
+			"vp_cost": 4,
+			"power": 12,
+			"target": "Foe",
+			"sprite": "spr_sorc_quake",
+			"effect": null
+		},
+		{
+			"name": "Stone",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Strike a foe with a large stone.",
+			"range": 1,
+			"vp_cost": 6,
+			"power": "Attack+15",
+			"target": "Foe",
+			"sprite": "spr_sorc_stone",
+			"effect": null
+		},
+		{
+			"name": "Natural Cure",
+			"element": "Earth",
+			"use_zone": "Both",
+			"description": "Remove poison from one ally.",
+			"range": 1,
+			"vp_cost": 2,
+			"power": 0,
+			"target": "Ally",
+			"sprite": "spr_sorc_nat_cure",
+			"effect": "cure_poison_single"
+		},
+	]
+}

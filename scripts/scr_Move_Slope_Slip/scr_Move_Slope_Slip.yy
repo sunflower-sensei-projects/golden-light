@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Move_Slope_Slip",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Move_Slope_Slip",
+  "parent":{
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

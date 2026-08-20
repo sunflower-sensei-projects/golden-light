@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Move_Stairs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Move_Stairs",
+  "parent":{
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

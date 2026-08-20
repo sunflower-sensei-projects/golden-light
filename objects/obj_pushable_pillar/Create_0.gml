@@ -1,0 +1,2 @@
+event_inherited(); // MUST be first line, so obj_pushable's own Create logic still runs
+top_z_level = z_level + 1; // however tall THIS pillar is - adjust the +1 per instance if you want variable heights

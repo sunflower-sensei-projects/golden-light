@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_menu_page_faefolk",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_menu_page_faefolk",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+/// User Event 2 = stone-hit reaction (fs_apply_stone calls event_user(2))

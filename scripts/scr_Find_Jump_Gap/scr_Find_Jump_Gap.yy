@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Find_Jump_Gap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Find_Jump_Gap",
+  "parent":{
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

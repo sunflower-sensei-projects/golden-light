@@ -1,0 +1,72 @@
+{
+    "enemies":[
+        {
+            "name": "Test Enemy",
+            "enemy_hp": 100,
+            "enemy_vp": 100,
+            "enemy_attack": 5,
+            "enemy_defense": 5,
+            "enemy_agility": 5,
+            "enemy_luck": 10,
+            "enemy_ele_earth_pow": 10,
+            "enemy_ele_earth_res": 10,
+            "enemy_ele_fire_pow": 10,
+            "enemy_ele_fire_res": 10,
+            "enemy_ele_water_pow": 10,
+            "enemy_ele_water_res": 10,
+            "enemy_ele_wind_pow": 10,
+            "enemy_ele_wind_res": 10,
+            "enemy_skills":[
+                {
+                    "act_name": "Fire Bolt",
+                    "act_type": "offense",
+                    "act_target": "single",
+                    "act_damage": 10,
+                    "act_element": "fire",
+                    "act_status": "burn",
+                    "act_status_rate": 30
+                }
+            ],
+            "enemy_ai": "dumb",
+            "enemy_items": [],
+            "enemy_sprite": "spr_b_test_front"
+        }
+    ],
+    "bosses":[
+        {
+            "name": "Saturos",
+            "enemy_hp": 2000,
+            "enemy_vp": 1000,
+            "enemy_attack": 5,
+            "enemy_defense": 5,
+            "enemy_agility": 5,
+            "enemy_luck": 10,
+            "enemy_ele_earth_pow": 10,
+            "enemy_ele_earth_res": 10,
+            "enemy_ele_fire_pow": 10,
+            "enemy_ele_fire_res": 10,
+            "enemy_ele_water_pow": 10,
+            "enemy_ele_water_res": 10,
+            "enemy_ele_wind_pow": 10,
+            "enemy_ele_wind_res": 10,
+            "enemy_skills":[
+                {
+                    "act_name": "Fire Bolt",
+                    "act_type": "offense",
+                    "act_target": "single",
+                    "act_damage": 10,
+                    "act_element": "fire",
+                    "act_status": "burn",
+                    "act_status_rate": 30
+                }
+            ],
+            "enemy_ai": "smart",
+            "enemy_items": [],
+            "enemy_standing_sprite": "spr_b_sat_front",
+            "enemy_attack_sprite1": "spr_b_sat_front_attack1",
+            "enemy_attack_sprite2": "spr_b_sat_front_attack2",
+            "enemy_hurt_sprite": "spr_b_sat_front_hit",
+            "enemy_cast_sprite": "spr_b_sat_front_cast1"
+        }
+    ]
+}

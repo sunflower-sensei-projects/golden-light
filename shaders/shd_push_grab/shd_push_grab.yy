@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_push_grab",
+  "name":"shd_push_grab",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

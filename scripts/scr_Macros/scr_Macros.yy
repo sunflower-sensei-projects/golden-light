@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Macros",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Macros",
+  "parent":{
+    "name":"Initialization",
+    "path":"folders/Scripts/Initialization.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

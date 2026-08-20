@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Abilities",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Abilities",
+  "parent":{
+    "name":"Abilities",
+    "path":"folders/Scripts/Abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

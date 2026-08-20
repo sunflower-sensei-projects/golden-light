@@ -1,0 +1,30 @@
+{
+	"Faefolk": [
+		{
+			"name": "Quartz",
+			"element": "Earth",
+			"description": "Strike one foe with the power of Earth.",
+			"hp_bonus": 8,
+			"vp_bonus": 4,
+			"attack_bonus": 3,
+			"defense_bonus": 0,
+			"agility_bonus": 0,
+			"luck_bonus": 0,
+			"sprite": "spr_fae_quartz",
+			"power": "attack+EP"
+		},
+		{
+			"name": "Sediment",
+			"element": "Earth",
+			"description": "Slow one foe and weaken their defense.",
+			"hp_bonus": 10,
+			"vp_bonus": 3,
+			"attack_bonus": 0,
+			"defense_bonus": 2,
+			"agility_bonus": 2,
+			"luck_bonus": 0,
+			"sprite": "spr_fae_sediment",
+			"power": null
+		},
+	]
+}

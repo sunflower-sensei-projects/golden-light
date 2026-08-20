@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Stair_Diagonal_helpers",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Stair_Diagonal_helpers",
+  "parent":{
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
