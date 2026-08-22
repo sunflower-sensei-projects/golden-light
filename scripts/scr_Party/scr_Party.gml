@@ -106,9 +106,10 @@ function addProtagToParty(_protagName) {
 
 function removeProtagFromParty(_protagName) {
 	// Remove the named protagonist character from the party array
-	for (var _i = 0; _i < array_length(_Party); _i++) {
-		if (_Party[_i].char_name == _protagName) {
-			array_delete(_Party, _i, 1);
+	var _mgr = obj_party_controller;
+	for (var _i = 0; _i < array_length(_mgr._Party); _i++) {
+		if (_mgr._Party[_i].char_name == _protagName) {
+			array_delete(_mgr._Party, _i, 1);
 			break;
 		}
 	}
@@ -116,9 +117,10 @@ function removeProtagFromParty(_protagName) {
 }
 
 function getProtagData(_protagName) {
-	for (var _i = 0; _i < array_length(_Party); _i++) {
-		if (_Party[_i].char_name == _protagName) {
-			return _Party[_i]	
+	var _mgr = obj_party_controller;
+	for (var _i = 0; _i < array_length(_mgr._Party); _i++) {
+		if (_mgr._Party[_i].char_name == _protagName) {
+			return _mgr._Party[_i]	
 		}
 	}
 	
@@ -129,7 +131,8 @@ function moveProtag(_protagName, _newSlot) {
 	var _temp = getProtagData(_protagName);
 	if (_temp == undefined) return;
 	removeProtagFromParty(_protagName);
-	array_insert(_Party, _newSlot, _temp);
+	var _mgr = obj_party_controller;
+	array_insert(_mgr._Party, _newSlot, _temp);
 	scr_Party_Update_Leader();
 }
 
@@ -137,7 +140,8 @@ function scr_Party_Set_Leader(_protagName) {
 	var _temp = getProtagData(_protagName);
 	if (_temp == undefined) return;
 	removeProtagFromParty(_protagName);
-	array_insert(_Party, 0, _temp);
+	_mgr = obj_party_controller;
+	array_insert(_mgr._Party, 0, _temp);
 	scr_Party_Update_Leader();
 }
 
