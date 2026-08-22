@@ -34,6 +34,11 @@ global.ability_data = []; global.ability_index = {};
 global.fae_data = [];     global.fae_index = {};
 global.summon_data = [];  global.summon_index = {};
 
+// Other Globals
+global.char_invs = [];
+global.item_max = 0;
+global.coins = 0;
+
 // Font
 global.font = font_add_sprite_ext(
     spr_font,

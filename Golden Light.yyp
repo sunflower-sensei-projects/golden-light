@@ -193,7 +193,6 @@
     {"id":{"name":"scr_Check_Landing","path":"scripts/scr_Check_Landing/scr_Check_Landing.yy",},},
     {"id":{"name":"scr_effect_registry","path":"scripts/scr_effect_registry/scr_effect_registry.yy",},},
     {"id":{"name":"scr_Events","path":"scripts/scr_Events/scr_Events.yy",},},
-    {"id":{"name":"scr_Faefolk","path":"scripts/scr_Faefolk/scr_Faefolk.yy",},},
     {"id":{"name":"scr_field_push","path":"scripts/scr_field_push/scr_field_push.yy",},},
     {"id":{"name":"scr_field_sorcery_registry","path":"scripts/scr_field_sorcery_registry/scr_field_sorcery_registry.yy",},},
     {"id":{"name":"scr_Find_Facing_Object","path":"scripts/scr_Find_Facing_Object/scr_Find_Facing_Object.yy",},},

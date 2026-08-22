@@ -145,7 +145,6 @@
     {"name":"scr_Check_Landing","order":12,"path":"scripts/scr_Check_Landing/scr_Check_Landing.yy",},
     {"name":"scr_effect_registry","order":3,"path":"scripts/scr_effect_registry/scr_effect_registry.yy",},
     {"name":"scr_Events","order":15,"path":"scripts/scr_Events/scr_Events.yy",},
-    {"name":"scr_Faefolk","order":19,"path":"scripts/scr_Faefolk/scr_Faefolk.yy",},
     {"name":"scr_field_push","order":7,"path":"scripts/scr_field_push/scr_field_push.yy",},
     {"name":"scr_field_sorcery_registry","order":5,"path":"scripts/scr_field_sorcery_registry/scr_field_sorcery_registry.yy",},
     {"name":"scr_Find_Facing_Object","order":6,"path":"scripts/scr_Find_Facing_Object/scr_Find_Facing_Object.yy",},
