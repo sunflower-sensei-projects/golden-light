@@ -160,6 +160,6 @@ function isInParty(_name) {
 		if (_mgr._Party[_i].char_name == _name) {
 			return _i;
 		}
-	return false;
 	}
+	return false;
 }

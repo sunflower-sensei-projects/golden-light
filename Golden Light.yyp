@@ -97,7 +97,15 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"abilities.json","CopyToMask":-1,"filePath":"datafiles","name":"abilities.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"chars.json","CopyToMask":-1,"filePath":"datafiles","name":"chars.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"enemies.json","CopyToMask":-1,"filePath":"datafiles","name":"enemies.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"faefolk.json","CopyToMask":-1,"filePath":"datafiles","name":"faefolk.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"items.json","CopyToMask":-1,"filePath":"datafiles","name":"items.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"magic.json","CopyToMask":-1,"filePath":"datafiles","name":"magic.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"summons.json","CopyToMask":-1,"filePath":"datafiles","name":"summons.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
