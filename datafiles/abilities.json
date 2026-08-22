@@ -1,8 +1,26 @@
 {
-	"Attacks": [
-		
-	],
-	"Abilities": [
-		
-	],
+  "Abilities": [
+    {
+      "name": "Attack",
+      "id": "attack",
+      "type": "physical",
+      "element": "physical",
+      "target_mode": "single_enemy",
+      "anim_user": "attack",
+      "impact_spr": "",
+      "sfx": "sfx_hit",
+      "damage_formula": "standard_physical"
+    },
+    {
+      "name": "Stunned",
+      "id": "stunned",
+      "type": "none",
+      "element": "none",
+      "target_mode": "self",
+      "anim_user": "idle",
+      "impact_spr": "",
+      "sfx": "",
+      "damage_formula": "none"
+    }
+  ]
 }

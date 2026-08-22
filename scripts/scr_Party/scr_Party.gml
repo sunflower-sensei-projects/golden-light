@@ -1,15 +1,3 @@
-function loadCharData(){
-	var _charBuffer = buffer_load("chars.json");
-	var _string = buffer_read(_charBuffer, buffer_string);
-	buffer_delete(_charBuffer);
-	
-	var _data = json_parse(_string);
-	global.char_data = variable_struct_get(_data, "Characters");
-	global.char_index = buildIndex(global.char_data);
-	
-	return 0;
-}
-
 function new_character(_name) constructor
 {
 	// Find the index of the character in the index struct

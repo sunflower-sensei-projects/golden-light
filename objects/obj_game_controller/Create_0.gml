@@ -1,115 +1,90 @@
-// This object should be the Prime Object
-// It is loaded first, and is never destroyed
+/// obj_game_controller Create
+/// This is the prime persistent object. Created in rm_init.
 
-// It handles game initialization, saving and loading, and the title screen
+persistent = true;
 
-// Game Init
-// gameInit();
-
-// Quit timer
+// Quit handling
 quit_timer = 0;
-quitting = false;
+quitting   = false;
 
-// Other variables
-global.last_room = 0;
-global.resetPlayer = false;
-global.max_z_level = 2;
-global.player_last_x = 0;
-global.player_last_y = 0;
-global.player_last_facing_x = 0;
-global.player_last_facing_y = 0;
-global.player_last_sprite = 0;
-global.player_last_spr_index = 0;
-global.player_last_z_level = 0;
+// Boot state
+boot_failed = false;
+boot_errors = [];
 
-global.battle_log = [];
+enum gState {
+	INIT, TITLE, OVERWORLD, BATTLE
+};
+
+// Core globals
+global.last_room         = -1;
+global.resetPlayer       = false;
+global.max_z_level       = 4;
+global.menu_open         = false;
+global.paused            = false;
+global.battle_log        = [];
 global.battle_log_buffer = [];
+global.game_state        = gState.INIT;
 
-global.char_data = [];
-global.char_index = [];
-global.enemy_data = [];
-global.enemy_index = [];
-global.ability_data = [];
-global.encounter_data = [];
-global.item_data = [];
-global.sorcery_data = [];
-global.fae_data = [];
-global.summon_data = [];
+// Data containers (filled by boot loader)
+global.char_data = [];    global.char_index = {};
+global.enemy_data = [];   global.enemy_index = {};
+global.item_data = [];    global.item_index = {};
+global.sorcery_data = []; global.sorcery_index = {};
+global.ability_data = []; global.ability_index = {};
+global.fae_data = [];     global.fae_index = {};
+global.summon_data = [];  global.summon_index = {};
 
-// Create and store the font
-global.font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?()abcdefghijklmnopqrstuvwxyz.@/:0123456789-_~#|,';\"&$%^+=<>[]", false, -2);
+// Font
+global.font = font_add_sprite_ext(
+    spr_font,
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?()abcdefghijklmnopqrstuvwxyz.@/:0123456789-_~#|,';\"&$%^+=<>[]",
+    false, -2
+);
 
+// ========== BOOT SEQUENCE ==========
+var _result = scr_Boot_Load_All_Data();
 
-// Other initialization function calls
-scr_field_sorcery_registry_init();
+if (_result.success) {
+    // Create other persistent managers
+    if (!instance_exists(obj_party_controller)) {
+        instance_create_depth(0, 0, 0, obj_party_controller);
+    }
+    if (!instance_exists(obj_menu_controller)) {
+        instance_create_depth(0, 0, 0, obj_menu_controller);
+    }
+    if (!instance_exists(obj_audio_controller)) {
+		instance_create_depth(0, 0, 0, obj_audio_controller);	
+	}
+	if (!instance_exists(obj_debug_controller)) {
+		instance_create_depth(0, 0, 0, obj_debug_controller);	
+	}
+    
+    room_goto(rm_title);
+} else {
+    boot_failed = true;
+    boot_errors = _result.errors;
+}
 
-/// HELPER FUNCTIONS ///
-
+// HELPER FUNCTIONS
 function new_game() {
-	// Called when a new game file is started
-}
-
-function new_game_plus() {
-	// Called when a new game+ file is started	
-}
-
-function save_game(_slot) {
-	// Function which saves the volitile game data to a file	
-}
-
-function load_game(_slot) {
-	// Loads the game save file and returns the game to the saved state	
-}
-
-function load_player_data() {
-	// Read the character JSON and load the data into memory
-	var _charBuffer = buffer_load("chars.json");
-	var _string = buffer_read(_charBuffer, buffer_string);
-	buffer_delete(_charBuffer);
-	
-	var _data = json_parse(_string);
-	global.char_data = variable_struct_get(_data, "Characters");
-	global.char_index = buildIndex(global.char_data);
-}
-
-function load_enemy_data() {
-	// Read the enemy data JSON and load the data into memory
-	var _enemyBuffer = buffer_load("enemies.json");
-	var _string = buffer_read(_enemyBuffer, buffer_string);
-	buffer_delete(_enemyBuffer);
-	
-	var _data = json_parse(_string);
-	
-	var _enemies = variable_struct_get(_data, "enemies");
-	var _bosses = variable_struct_get(_data, "bosses");
-	
-	global.enemy_data = array_concat(_enemies, _bosses);
-	global.enemy_index = buildIndex(global.enemy_data);
-}
-
-load_ability_data(); // Load the ability data into memory, this overwirtes global.ability_data
-load_sorcery_data();
-
-function load_encounter_data() {
-	// Read the encounter data JSON and load the data into memory
-}
-
-function load_faefolk_data() {
-	// Read the Faefolk JSON and load the data into memory
-}
-
-function load_summon_data() {
-	// Reads the summon JSON and loads the data into memory
-}
-
-function load_sorcery_data() {
-	// Reads the magic JSON and loads the data into memory
-	var _sorcBuffer = buffer_load("magic.json");
-	var _string = buffer_read(_sorcBuffer, buffer_string);
-	buffer_delete(_sorcBuffer);
-	
-	var _data = json_parse(_string);
-	global.sorcery_data = variable_struct_get(_data, "Sorceries");
-	global.sorcery_index = buildIndex(global.sorcery_data);
-	show_debug_message("Successfully loaded Sorcery data! Showing "+string(array_length(global.sorcery_data))+" sorceries in memory!");
+    // Clear any previous party
+    with (obj_party_controller) {
+        _Party = [];
+    }
+    
+    // Create starting character.
+    // new_character() already applies starter inventory + equipment from chars.json
+    var _result = addProtagToParty("Joshua");
+    if (_result != 0) {
+        show_debug_message("CRITICAL: Failed to create starting character Joshua");
+        return;
+    }
+    
+    show_debug_message("New Game started. Party size: " + string(array_length(obj_party_controller._Party)));
+    
+    // TODO: set any starting story flags here
+    // global.story = { act: 1, ... };
+    
+    // Go to the first gameplay room
+    // room_goto(rm_shalem_start);   // replace with your actual first room
 }

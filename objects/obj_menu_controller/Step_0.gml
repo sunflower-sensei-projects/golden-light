@@ -6,7 +6,7 @@ if (open_wait > 0) {
 
 // --- Opening the menu from the overworld ---
 if (!is_open) {
-	if (open_wait == 0 && global.player_battle == false && keyboard_check_pressed(ord("C"))) {
+	if (open_wait == 0 && global.game_state == gState.OVERWORLD && keyboard_check_pressed(ord("C"))) {
 		is_open = true;
 		global.menu_open = true;
 		open_wait = OPEN_WAIT_FRAMES;

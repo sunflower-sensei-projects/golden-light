@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Init",
+  "%Name":"scr_Boot_Load_All_Data",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Init",
+  "name":"scr_Boot_Load_All_Data",
   "parent":{
     "name":"Initialization",
     "path":"folders/Scripts/Initialization.yy",
