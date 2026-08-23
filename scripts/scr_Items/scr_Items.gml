@@ -332,6 +332,7 @@ function getItemType(_itemName) {
 	}
 }
 
+/*
 function buildInventory(_item_name_list) {
 	// Takes an array of item name strings and converts them to an array of item objects
 	if (array_length(_item_name_list) == 0) return [];
@@ -346,3 +347,4 @@ function buildInventory(_item_name_list) {
 	
 	return _item_list;
 }
+*/
