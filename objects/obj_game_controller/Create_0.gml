@@ -72,24 +72,17 @@ if (_result.success) {
 
 // HELPER FUNCTIONS
 function new_game() {
-    // Clear any previous party
-    with (obj_party_controller) {
-        _Party = [];
-    }
+    global.coins = 0;
     
-    // Create starting character.
-    // new_character() already applies starter inventory + equipment from chars.json
+    scr_Party_Clear();
+    
     var _result = addProtagToParty("Joshua");
     if (_result != 0) {
         show_debug_message("CRITICAL: Failed to create starting character Joshua");
         return;
     }
     
-    show_debug_message("New Game started. Party size: " + string(array_length(obj_party_controller._Party)));
+    show_debug_message("New Game started. Party size: " + string(scr_Party_Size()));
     
-    // TODO: set any starting story flags here
-    // global.story = { act: 1, ... };
-    
-    // Go to the first gameplay room
-    // room_goto(rm_shalem_start);   // replace with your actual first room
+    room_goto(rm_large_int_test); // Change to Joshua's house later
 }
