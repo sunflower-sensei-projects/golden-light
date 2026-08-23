@@ -9,12 +9,16 @@ function scr_Get_Terrain_Instance(_tag) {
 }
 
 function scr_Find_Interact_Target() {
-	// Find the nearest interactible object within range, and in front of the player
-	var _range = 24; // Set this to max distance for interaction
-	var _front_x = x + lengthdir_x(_range, dir);
-	var _front_y = y + lengthdir_y(_range, dir);
-	return instance_nearest(_front_x, _front_y, obj_interactable);
-	// Maybe tighten this with a distance check and return noone if nearest isn't in range?
+    var _range   = 24;
+    var _front_x = x + lengthdir_x(_range, dir);
+    var _front_y = y + lengthdir_y(_range, dir);
+    
+    if (!object_exists(TAG_INTERACT)) return noone;
+    
+    var _inst = instance_nearest(_front_x, _front_y, TAG_INTERACT);
+    if (_inst == noone) return noone;
+    if (point_distance(x, y, _inst.x, _inst.y) > _range) return noone;
+    return _inst;
 }
 
 function scr_Find_Pushover() {
